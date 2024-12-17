@@ -22,13 +22,6 @@ dist/
 .vscode/
 .idea/
 
-# Dépendances Java
-*.class
-*.jar
-
-# MacOS
-*.DS_Store
-
 # Autres
 *.swp
 *.bak
