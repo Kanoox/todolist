@@ -77,3 +77,12 @@ body {
     background: yellow;
     color: #333;
   }
+
+.validate{
+  background: lightgreen;
+  color: black;
+}
+
+.validated {
+  background-color: lightgreen !important;
+}

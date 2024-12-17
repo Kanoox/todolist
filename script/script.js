@@ -11,6 +11,12 @@ var taskList = document.getElementById("taskList");
       var li = document.createElement("li");
       li.innerHTML = taskText;
 
+      var valideButton = document.createElement("button");
+      valideButton.innerHTML = '<ion-icon name="bookmark-outline" class="validate"></ion-icon>';
+      valideButton.onclick = function() {
+        validateButton(li);
+      };
+
       var editButton = document.createElement("button");
       editButton.innerHTML = '<ion-icon name="pencil-outline" class="modify"></ion-icon>';
       editButton.onclick = function() {
@@ -23,11 +29,21 @@ var taskList = document.getElementById("taskList");
         deleteTask(li);
       };
 
+      li.appendChild(valideButton);
       li.appendChild(editButton);
       li.appendChild(deleteButton);
       taskList.appendChild(li);
 
       taskInput.value = "";
+    }
+
+
+    function validateButton(task){
+      if (task.style.backgroundColor == "lightgreen") {
+        task.style.backgroundColor = "white";
+      } else {
+        task.style.backgroundColor = "lightgreen";
+      }
     }
 
     function editTask(task) {
